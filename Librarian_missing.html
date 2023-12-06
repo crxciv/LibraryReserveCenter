@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="Resources/Yicon.png" type="image/x-icon" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Librarian</title>
+  </head>
+  <body>
+    <div class="nu-logo container text-center">
+      <img class="nu-logo-image" src="Resources/NULOGO.webp" />
+    </div>
+    <div id="nav-on-top" class=" ">
+      <div>
+        <nav class="lib-nav navbar">
+          <div class="container-fluid">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+              id="button"
+              style="border: 0"
+            >
+              <span class="navbar-toggler-icon"></span>
+              NU | Librarian
+            </button>
+
+            <div
+              class="sidebar offcanvas offcanvas-start"
+              tabindex="-1"
+              id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel"
+            >
+              <div class="offcanvas-header">
+                <img src="Resources/NULOGO.webp" width="15%" />
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body">
+                <div class="text-center d-flex flex-column">
+                  <img
+                    src="Resources/profile.png"
+                    width="25%"
+                    class="lib-nav-img mx-auto"
+                  />
+                  <br />
+                  <a
+                    href="login.html"
+                    class="lib-viewp-btn btn btn-outline-danger"
+                    >Log Out</a
+                  >
+                  <br />
+                </div>
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class="nav-link" href="Librarian_home.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Librarian_books.html"
+                      >All Books</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Librarian_reserve.html"
+                      >Reserved Books</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Librarian_borrow.html"
+                      >Borrowed Books</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="Librarian_missing.html"
+                      >Missing Books</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Librarian_messages.html"
+                      >Messages</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="b-line"></div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="search-container mx-auto">
+        <form on>
+          <input
+            type="text"
+            id="search-item"
+            class="search-input"
+            placeholder="Search..."
+            onkeyup="search()"
+          />
+          <i class="fa fa-search search-icon"></i>
+        </form>
+      </div>
+    </div>
+    <div class="books-nav-div">
+      <div class="d-flex justify-content-between container">
+        <button class="btn" onclick="history.back()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            fill="currentColor"
+            class="bi bi-arrow-left-short"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="book-list container" id="book-list">
+      <div class="mbook" data-category="SEA">
+        <img src="Books/8.png" width="200px" />
+        <div class="b-details">
+          <h3>PHP Programming with MySQL</h3>
+        </div>
+        <div class="status">
+          <div class="book-status d-flex"></div>
+          <a href="#" class="btn form-control btn-outline-success">Recovered</a>
+        </div>
+      </div>
+
+      <div class="mbook" data-category="SEA">
+        <img src="Books/9.png" width="200px" />
+        <div class="b-details">
+          <h3>iCloud (2nd Edition)</h3>
+        </div>
+        <div class="status">
+          <div class="book-status d-flex"></div>
+          <a href="#" class="btn form-control btn-outline-success">Recovered</a>
+        </div>
+      </div>
+
+      <div class="mbook" data-category="SEA">
+        <img src="Books/11.png" width="200px" />
+        <div class="b-details">
+          <h3>Intermediate Accounting 2 (2021 Edition)</h3>
+        </div>
+        <div class="status">
+          <div class="book-status d-flex"></div>
+          <a href="#" class="btn form-control btn-outline-success">Recovered</a>
+        </div>
+      </div>
+
+      <div class="mbook" data-category="SEA">
+        <img src="Books/1.png" width="200px" />
+        <div class="b-details">
+          <h3>Metric Handbook Planning and Design Data (6th Edition)</h3>
+        </div>
+        <div class="status">
+          <div class="book-status d-flex"></div>
+          <a href="#" class="btn form-control btn-outline-success">Recovered</a>
+        </div>
+      </div>
+      <div class="mbook" data-category="SEA">
+        <img src="Books/4.png" width="200px" />
+        <div class="b-details">
+          <h3>Analog Integrated Circuit Design (2nd Edition)</h3>
+        </div>
+        <div class="status">
+          <div class="book-status d-flex"></div>
+          <a href="#" class="btn form-control btn-outline-success">Recovered</a>
+        </div>
+      </div>
+    </div>
+    <div style="padding: 100px"></div>
+    <div class="bot-nav container">
+      <nav aria-label="page text-black">
+        <ul class="pagination justify-content-center">
+          <li class="page-item disabled">
+            <a href="#" class="page-link">Previous</a>
+          </li>
+          <li class="page-item disabled">
+            <a href="" class="page-link text-black">1</a>
+          </li>
+          <li class="page-item">
+            <a href="#" class="page-link text-black">2</a>
+          </li>
+          <li class="page-item">
+            <a href="" class="page-link text-black">3</a>
+          </li>
+          <li>
+            <a href="" class="page-link text-black">Next</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <footer>
+      <div class="lib-footer">
+        <h1 class="text-white text-center fs-4">LIBRARY RESERVE CENTER</h1>
+        <div class="lib-footer-div d-flex text-center">
+          <a href="" class="lib-footer-links">Home | </a>
+          <a href="" class="lib-footer-links">&nbsp; Privacy Policy |</a>
+          <a href="" class="lib-footer-links">&nbsp; Terms </a>
+        </div>
+        <div class="lib-footer-btm">
+          <p class="lib-footer-txt text-center">
+            Copyright ©NU-Laguna 2023. Library Reserve Center. All Rights
+            Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

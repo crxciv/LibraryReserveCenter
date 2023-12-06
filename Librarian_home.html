@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="Resources/Yicon.png" type="image/x-icon" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Librarian</title>
+  </head>
+  <body>
+    <div class="nu-logo container text-center">
+      <img class="nu-logo-image" src="Resources/NULOGO.webp" />
+    </div>
+    <div id="nav-on-top" class=" ">
+      <div>
+        <nav class="lib-nav navbar">
+          <div class="container-fluid">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+              id="button"
+              style="border: 0"
+            >
+              <span class="navbar-toggler-icon"></span>
+              NU | Librarian
+            </button>
+
+            <div
+              class="sidebar offcanvas offcanvas-start"
+              tabindex="-1"
+              id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel"
+            >
+              <div class="offcanvas-header">
+                <img src="Resources/NULOGO.webp" width="15%" />
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body">
+                <div class="text-center d-flex flex-column">
+                  <img
+                    src="Resources/profile.png"
+                    width="25%"
+                    class="lib-nav-img mx-auto"
+                  />
+                  <br />
+                  <a
+                    href="login.html"
+                    class="lib-viewp-btn btn btn-outline-danger"
+                    >Log Out</a
+                  >
+                  <br />
+                </div>
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="Librarian_home.html"
+                      >Home</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Librarian_books.html"
+                      >All Books</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Librarian_reserve.html"
+                      >Reserved Books</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Librarian_borrow.html"
+                      >Borrowed Books</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Librarian_missing.html"
+                      >Missing Books</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Librarian_messages.html"
+                      >Messages</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="b-line"></div>
+      </div>
+    </div>
+    <div class="lib-home-box"></div>
+    <div class="lib-home-top container">
+      <h1>LIBRARIAN</h1>
+    </div>
+
+    <div class="lib-home-div container">
+      <div class="lib-home-box1 b1">
+        <h1>24</h1>
+        <hr />
+        <div class="lib-home-viewbtn">
+          <a href="Librarian_books.html"><p>BOOKS</p></a>
+        </div>
+      </div>
+
+      <div class="lib-home-box1 b2">
+        <h1>3</h1>
+        <hr />
+        <div class="lib-home-viewbtn">
+          <a href="Librarian_missing.html"><p>MISSING</p></a>
+        </div>
+      </div>
+      <div class="lib-home-box1 b4">
+        <h1>5</h1>
+        <hr />
+        <div class="lib-home-viewbtn">
+          <a href="Librarian_messages.html"><p>MESSAGE</p></a>
+        </div>
+      </div>
+      <div class="lib-home-box1 b5">
+        <h1>2</h1>
+        <hr />
+        <div class="lib-home-viewbtn">
+          <a href="Librarian_reserve.html"><p>RESERVED</p></a>
+        </div>
+      </div>
+      <div class="lib-home-box1 b6">
+        <h1>4</h1>
+        <hr />
+        <div class="lib-home-viewbtn">
+          <a href="Librarian_borrow.html"><p>BORROWED</p></a>
+        </div>
+      </div>
+      <div class="lib-home-box1 b3">
+        <h1>2</h1>
+        <hr />
+        <div class="lib-home-viewbtn">
+          <a href="Librarian_reserve.html"><p>TO RETURN</p></a>
+        </div>
+      </div>
+    </div>
+    <div class="lib-duty-div container">
+      <h1 class="lib-duty-title">LIBRARIAN DUTY</h1>
+      <table class="table table-striped table-hover table-bordered">
+        <tr>
+          <th class="m-hide"></th>
+          <th>Name</th>
+          <th class="m-hide">Time In</th>
+          <th class="m-hide">Time Out</th>
+          <th class="text-center">Status</th>
+        </tr>
+        <tr>
+          <td class="m-hide text-center"><b>1</b></td>
+          <td>Celino, Andrea Charisse</td>
+          <td class="m-hide">07:03am</td>
+          <td class="m-hide">-- --</td>
+          <td><div class="avail mx-auto"></div></td>
+        </tr>
+        <tr>
+          <td class="m-hide text-center"><b>2</b></td>
+          <td>De Borja, Abdul Aziz</td>
+          <td class="m-hide">07:45am</td>
+          <td class="m-hide">12:37pm</td>
+          <td><div class="unavail mx-auto"></div></td>
+        </tr>
+        <tr>
+          <td class="m-hide text-center"><b>3</b></td>
+          <td>Rausa, Zyrha Alliah</td>
+          <td class="m-hide">10:15am</td>
+          <td class="m-hide">-- --</td>
+          <td><div class="avail mx-auto"></div></td>
+        </tr>
+        <tr>
+          <td class="m-hide text-center"><b>4</b></td>
+          <td>Togado, Apple Jane</td>
+          <td class="m-hide">08:00am</td>
+          <td class="m-hide">-- --</td>
+          <td><div class="avail mx-auto"></div></td>
+        </tr>
+        <tr>
+          <td class="m-hide text-center"><b>5</b></td>
+          <td>Young, Ethan</td>
+          <td class="m-hide">09:30am</td>
+          <td class="m-hide">-- --</td>
+          <td><div class="avail mx-auto"></div></td>
+        </tr>
+        <tr>
+          <td class="m-hide text-center"><b>6</b></td>
+          <td>Peralta, Jake Raymond</td>
+          <td class="m-hide">07:00am</td>
+          <td class="m-hide">-- --</td>
+          <td><div class="avail mx-auto"></div></td>
+        </tr>
+        <tr>
+          <td class="m-hide text-center"><b>7</b></td>
+          <td>Abadillos, Charles Ivler</td>
+          <td class="m-hide">12:00pm</td>
+          <td class="m-hide">04:00pm</td>
+          <td><div class="unavail mx-auto"></div></td>
+        </tr>
+        <tr>
+          <td class="m-hide text-center"><b>8</b></td>
+          <td>Dangue, Anabelle</td>
+          <td class="m-hide">1:20pm</td>
+          <td class="m-hide">-- --</td>
+          <td><div class="avail mx-auto"></div></td>
+        </tr>
+        <tr>
+          <td class="m-hide text-center"><b>9</b></td>
+          <td>Aquino, Althea Reece</td>
+          <td class="m-hide">11:20am</td>
+          <td class="m-hide">01:43pm</td>
+          <td><div class="unavail mx-auto"></div></td>
+        </tr>
+        <tr>
+          <td class="m-hide text-center"><b>10</b></td>
+          <td>Swift, Taylor Ann</td>
+          <td class="m-hide">07:30am</td>
+          <td class="m-hide">-- --</td>
+          <td><div class="avail mx-auto"></div></td>
+        </tr>
+      </table>
+      <div style="padding: 30px"></div>
+    </div>
+    <footer>
+      <div class="lib-footer">
+        <h1 class="text-white text-center fs-4">LIBRARY RESERVE CENTER</h1>
+        <div class="lib-footer-div d-flex text-center">
+          <a href="" class="lib-footer-links">Home | </a>
+          <a href="" class="lib-footer-links">&nbsp; Privacy Policy |</a>
+          <a href="" class="lib-footer-links">&nbsp; Terms </a>
+        </div>
+        <div class="lib-footer-btm">
+          <p class="lib-footer-txt text-center">
+            Copyright ©NU-Laguna 2023. Library Reserve Center. All Rights
+            Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

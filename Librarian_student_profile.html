@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="Resources/Yicon.png" type="image/x-icon" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Librarian</title>
+  </head>
+  <body>
+    <div class="nu-logo container text-center">
+      <img class="nu-logo-image" src="Resources/NULOGO.webp" />
+    </div>
+    <div id="nav-on-top" class=" ">
+      <div>
+        <nav class="lib-nav navbar">
+          <div class="container-fluid">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+              id="button"
+              style="border: 0"
+            >
+              <span class="navbar-toggler-icon"></span>
+              NU | Librarian
+            </button>
+
+            <div
+              class="sidebar offcanvas offcanvas-start"
+              tabindex="-1"
+              id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel"
+            >
+              <div class="offcanvas-header">
+                <img src="Resources/NULOGO.webp" width="15%" />
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body">
+                <div class="text-center d-flex flex-column">
+                  <img
+                    src="Resources/profile.png"
+                    width="25%"
+                    class="lib-nav-img mx-auto"
+                  />
+                  <br />
+                  <a
+                    href="login.html"
+                    class="lib-viewp-btn btn btn-outline-danger"
+                    >Log Out</a
+                  >
+                  <br />
+                </div>
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class="nav-link" href="Librarian_home.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Librarian_books.html"
+                      >All Books</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Librarian_books.html"
+                      >Reserved Books</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Librarian_borrow.html"
+                      >Borrowed Books</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Librarian_missing.html"
+                      >Missing Books</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Librarian_messages.html"
+                      >Messages</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="b-line"></div>
+      </div>
+    </div>
+
+    <div class="container" style="padding-top: 50px">
+      <div>
+        <button class="btn" onclick="history.back()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            fill="currentColor"
+            class="bi bi-arrow-left-short"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="stdnt-pimage text-center">
+        <img src="Resources/profile.png" />
+      </div>
+      <div class="stdnt-info text-center">
+        <h3>Dimagiba, Tanggol Agustin</h3>
+        <p>BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY (BSIT-211A)</p>
+      </div>
+      <hr />
+      <div>
+        <br />
+        <div class="stdnt-info-addrs row">
+          <h3 class="text-center">PRESENT ADDRESS</h3>
+
+          <div class="col-lg-4 col-md-12 col-sm-12">Province:</div>
+          <div class="col-lg-8 col-md-12 col-sm-12">
+            <input value="Laguna" readonly class="form-control" />
+            <div style="padding: 10px"></div>
+          </div>
+          <div class="col-lg-4 col-md-12 col-sm-12">City/Municipality:</div>
+          <div class="col-lg-8 col-md-12 col-sm-12">
+            <input value="Calamba City" readonly class="form-control" />
+            <div style="padding: 10px"></div>
+          </div>
+          <div class="col-lg-4 col-md-12 col-sm-12">House No./ St.:</div>
+          <div class="col-lg-8 col-md-12 col-sm-12">
+            <textarea
+              value="Male"
+              readonly
+              class="form-control"
+              cols="30"
+              rows="3"
+            >
+B1 L31</textarea
+            >
+            <tex />
+            <div style="padding: 10px"></div>
+          </div>
+          <div class="col-lg-4 col-md-12 col-sm-12">Barangay:</div>
+          <div class="col-lg-8 col-md-12 col-sm-12">
+            <input value="Palo-Alto" readonly class="form-control" />
+            <div style="padding: 10px"></div>
+          </div>
+          <div class="col-lg-4 col-md-12 col-sm-12">Postal Code:</div>
+          <div class="col-lg-8 col-md-12 col-sm-12">
+            <input value="4027" readonly class="form-control" />
+            <div style="padding: 10px"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <div class="stdnt-recent container">
+      <h3 class="text-center">RECENT ACTIVITY</h3>
+      <br />
+
+      <div class="row">
+        <div class="sdtn-rcnt-div col-lg-6 col-md-6 col-sm-12">
+          <h5 class="text-center">Recently Borrowed</h5>
+          <br />
+
+          <ol type="I">
+            <li class="">
+              <p class="">Graphic Design x100</p>
+            </li>
+            <li class="">
+              <p class="">The Economic of Sports (6th Edition)</p>
+            </li>
+            <li class="">
+              <p class="">The Real Madrid Way</p>
+            </li>
+          </ol>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <h5 class="text-center">Recent Visit</h5>
+          <br />
+          <div class="row">
+            <div class="col-lg-6 col-md-6">
+              <ol type="I">
+                <li>
+                  <p>August 09, 2023</p>
+                </li>
+                <li>
+                  <p>July 20, 2023</p>
+                </li>
+                <li>
+                  <p>June 12, 2023</p>
+                </li>
+              </ol>
+            </div>
+            <div class="m-hide col-lg-6 col-md-6">
+              <ul style="list-style-type: none">
+                <li>
+                  <p>10:20am</p>
+                </li>
+                <li>
+                  <p>11:20pm</p>
+                </li>
+                <li>
+                  <p>01:00pm</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="stdnt-vltn">
+        <br />
+        <h3 class="text-center">STUDENT DEMERIT POINTS</h3>
+        <br />
+        <div class="demerit-cirlce-div">
+          <div class="demerit-cricle">
+            <h1 class="demerit-number">100</h1>
+          </div>
+        </div>
+      </div>
+      <br /><br />
+    </div>
+    <div class="return-btn text-center">
+      <button onclick="history.back() " class="btn btn-outline-dark w-50">
+        RETURN
+      </button>
+    </div>
+
+    <footer class="lib-footer">
+      <h1 class="text-white text-center fs-4">LIBRARY RESERVE CENTER</h1>
+      <div class="lib-footer-div d-flex text-center">
+        <a href="" class="lib-footer-links">Home | </a>
+        <a href="" class="lib-footer-links">&nbsp; Privacy Policy |</a>
+        <a href="" class="lib-footer-links">&nbsp; Terms </a>
+      </div>
+      <div class="lib-footer-btm">
+        <p class="lib-footer-txt text-center">
+          Copyright ©NU-Laguna 2023. Library Reserve Center. All Rights
+          Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

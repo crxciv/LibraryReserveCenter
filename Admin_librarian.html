@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="Resources/Wicon.png" type="image/x-icon" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>LRC | Admin</title>
+  </head>
+  <body class="admin-body">
+    <div id="nav-on-top" class=" ">
+      <div>
+        <nav class="admin-nav navbar">
+          <div class="container-fluid">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+              id="button"
+              style="border: 0"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div
+              class="sidebar admin-sidebar offcanvas offcanvas-start"
+              tabindex="-1"
+              id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel"
+            >
+              <div class="offcanvas-header">
+                <h3>Admin</h3>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body">
+                <div class="text-center d-flex flex-column"></div>
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class="nav-link" href="Admin_home.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Admin_upload.html"
+                      >Upload Books</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Admin_managebooks.html"
+                      >Manage Book</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Admin_missing.html"
+                      >Missing Book</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Admin_student.html"
+                      >Students Info</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="Admin_librarian.html"
+                      >Librarian Info</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Admin_transactions.html"
+                      >Transactions</a
+                    >
+                  </li>
+                </ul>
+                <a
+                  href="login.html"
+                  class="admin-nav-lgout btn btn-outline-danger"
+                  >Log Out</a
+                >
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="r-line"></div>
+      </div>
+    </div>
+    <div class="admin-hme-tile-div container shadow-lg">
+      <h1 class="admin-home-txt">LIBRARIANS INFO</h1>
+    </div>
+    <br /><br />
+    <a href="Admin_Add_librarian.html" class="admin-addsdtnbtn">
+      <div class="admin-add-div container shadow-lg">
+        <h5>ADD LIBRARIAN</h5>
+      </div>
+    </a>
+    <br />
+    <div class="container admin-div-dark shadow-lg">
+      <table
+        id="data-table"
+        class="admin-student-table table table-hover table-responsive-sm"
+        style="width: 100%"
+      >
+        <thead>
+          <tr class="text-center">
+            <th>Name</th>
+            <th class="table-hide m-hide">Email</th>
+            <th class="text-center m-hide">Role</th>
+            <th class="text-center">Remove</th>
+            <th>View</th>
+          </tr>
+        </thead>
+        <tbody class="student-list">
+          <tr class="student">
+            <td class="student-search">De Borja, Abdul Aziz A.</td>
+            <td class="student-search text-center m-hide">
+              deborjaa@librarian.students.nu-laguna.edu.ph
+            </td>
+            <td class="text-center m-hide">Student</td>
+            <td class="text-center">
+              <button class="btn btn-outline-danger">REMOVE</button>
+            </td>
+            <td class="text-center">
+              <a href="Admin_librarian_info.html" class="btn btn-primary"
+                >View</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="student-search">Celino, Andrea Charisse A.</td>
+            <td class="student-search text-center m-hide">
+              celinoa@librarian.students.nu-laguna.edu.ph
+            </td>
+            <td class="text-center m-hide">Student</td>
+            <td class="text-center">
+              <button class="btn btn-outline-danger">REMOVE</button>
+            </td>
+            <td class="text-center">
+              <a href="Admin_librarian_info.html" class="btn btn-primary"
+                >View</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="student-search">Rausa, Zyrha Alliah</td>
+            <td class="student-search text-center m-hide">
+              rausaz@librarian.students.nu-laguna.edu.ph
+            </td>
+            <td class="text-center m-hide">Student</td>
+            <td class="text-center">
+              <button class="btn btn-outline-danger">REMOVE</button>
+            </td>
+            <td class="text-center">
+              <a href="Admin_librarian_info.html" class="btn btn-primary"
+                >View</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="student-search">Young, Ethan G.</td>
+            <td class="student-search text-center m-hide">
+              younge@librarian.students.nu-laguna.edu.ph
+            </td>
+            <td class="text-center m-hide">Student</td>
+            <td class="text-center">
+              <button class="btn btn-outline-danger">REMOVE</button>
+            </td>
+            <td class="text-center">
+              <a href="Admin_librarian_info.html" class="btn btn-primary"
+                >View</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="student-search">Togado, Apple Jane U.</td>
+            <td class="student-search text-center m-hide">
+              togadoa@librarian.students.nu-laguna.edu.ph
+            </td>
+            <td class="text-center m-hide">Student</td>
+            <td class="text-center">
+              <button class="btn btn-outline-danger">REMOVE</button>
+            </td>
+            <td class="text-center">
+              <a href="Admin_librarian_info.html" class="btn btn-primary"
+                >View</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="student-search">Brofar, Euwayne Paulette B.</td>
+            <td class="student-search text-center m-hide">
+              brofare@librarian.students.nu-laguna.edu.ph
+            </td>
+            <td class="text-center m-hide">Student</td>
+            <td class="text-center">
+              <button class="btn btn-outline-danger">REMOVE</button>
+            </td>
+            <td class="text-center">
+              <a href="Admin_librarian_info.html" class="btn btn-primary"
+                >View</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="student-search">Marce, Malcolm A.</td>
+            <td class="student-search text-center m-hide">
+              marcem@librarian.students.nu-laguna.edu.ph
+            </td>
+            <td class="text-center m-hide">Student</td>
+            <td class="text-center">
+              <button class="btn btn-outline-danger">REMOVE</button>
+            </td>
+            <td class="text-center">
+              <a href="Admin_librarian_info.html" class="btn btn-primary"
+                >View</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="student-search">Lopez, Trisha B.</td>
+            <td class="student-search text-center m-hide">
+              lopezt@librarian.students.nu-laguna.edu.ph
+            </td>
+            <td class="text-center m-hide">Student</td>
+            <td class="text-center">
+              <button class="btn btn-outline-danger">REMOVE</button>
+            </td>
+            <td class="text-center">
+              <a href="Admin_librarian_info.html" class="btn btn-primary"
+                >View</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="student-search">Balidoy, Myle A.</td>
+            <td class="student-search text-center m-hide">
+              balidoya@librarian.students.nu-laguna.edu.ph
+            </td>
+            <td class="text-center m-hide">Student</td>
+            <td class="text-center">
+              <button class="btn btn-outline-danger">REMOVE</button>
+            </td>
+            <td class="text-center">
+              <a href="Admin_librarian_info.html" class="btn btn-primary"
+                >View</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="student-search">Basbas, Dave S.</td>
+            <td class="student-search text-center m-hide">
+              basbasd@librarian.students.nu-laguna.edu.ph
+            </td>
+            <td class="text-center m-hide">Student</td>
+            <td class="text-center">
+              <button class="btn btn-outline-danger">REMOVE</button>
+            </td>
+            <td class="text-center">
+              <a href="Admin_librarian_info.html" class="btn btn-primary"
+                >View</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="student-search">Abonalla, Ronan T.</td>
+            <td class="student-search text-center m-hide">
+              abonallar@librarian.students.nu-laguna.edu.ph
+            </td>
+            <td class="text-center m-hide">Student</td>
+            <td class="text-center">
+              <button class="btn btn-outline-danger">REMOVE</button>
+            </td>
+            <td class="text-center">
+              <a href="Admin_librarian_info.html" class="btn btn-primary"
+                >View</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="student-search">Sularta, Francis D.</td>
+            <td class="student-search text-center m-hide">
+              sulartaf@librarian.students.nu-laguna.edu.ph
+            </td>
+            <td class="text-center m-hide">Student</td>
+            <td class="text-center">
+              <button class="btn btn-outline-danger">REMOVE</button>
+            </td>
+            <td class="text-center">
+              <a href="Admin_librarian_info.html" class="btn btn-primary"
+                >View</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="student-search">Aquino, Farah R.</td>
+            <td class="student-search text-center m-hide">
+              aquinof@librarian.students.nu-laguna.edu.ph
+            </td>
+            <td class="text-center m-hide">Student</td>
+            <td class="text-center">
+              <button class="btn btn-outline-danger">REMOVE</button>
+            </td>
+            <td class="text-center">
+              <a href="Admin_librarian_info.html" class="btn btn-primary"
+                >View</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="student-search">Dela Cruz, Juan G.</td>
+            <td class="student-search text-center m-hide">
+              delacruzj@librarian.students.nu-laguna.edu.ph
+            </td>
+            <td class="text-center m-hide">Student</td>
+            <td class="text-center">
+              <button class="btn btn-outline-danger">REMOVE</button>
+            </td>
+            <td class="text-center">
+              <a href="Admin_librarian_info.html" class="btn btn-primary"
+                >View</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="student-search">Conde, Lalaine C.</td>
+            <td class="student-search text-center m-hide">
+              condel@librarian.students.nu-laguna.edu.ph
+            </td>
+            <td class="text-center m-hide">Student</td>
+            <td class="text-center">
+              <button class="btn btn-outline-danger">REMOVE</button>
+            </td>
+            <td class="text-center">
+              <a href="Admin_librarian_info.html" class="btn btn-primary"
+                >View</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="student-search">Fremista, Lara J.</td>
+            <td class="student-search text-center m-hide">
+              fremistal@librarian.students.nu-laguna.edu.ph
+            </td>
+            <td class="text-center m-hide">Student</td>
+            <td class="text-center">
+              <button class="btn btn-outline-danger">REMOVE</button>
+            </td>
+            <td class="text-center">
+              <a href="Admin_librarian_info.html" class="btn btn-primary"
+                >View</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="student-search">Garcia, Russell</td>
+            <td class="student-search text-center m-hide">
+              garciar@librarian.students.nu-laguna.edu.ph
+            </td>
+            <td class="text-center m-hide">Student</td>
+            <td class="text-center">
+              <button class="btn btn-outline-danger">REMOVE</button>
+            </td>
+            <td class="text-center">
+              <a href="Admin_librarian_info.html" class="btn btn-primary"
+                >View</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="student-search">Obmerga, Yasmin G.</td>
+            <td class="student-search text-center m-hide">
+              obmergay@librarian.students.nu-laguna.edu.ph
+            </td>
+            <td class="text-center m-hide">Student</td>
+            <td class="text-center">
+              <button class="btn btn-outline-danger">REMOVE</button>
+            </td>
+            <td class="text-center">
+              <a href="Admin_librarian_info.html" class="btn btn-primary"
+                >View</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="student-search">Landicho, Eric Joshua</td>
+            <td class="student-search text-center m-hide">
+              landichoe@librarian.students.nu-laguna.edu.ph
+            </td>
+            <td class="text-center m-hide">Student</td>
+            <td class="text-center">
+              <button class="btn btn-outline-danger">REMOVE</button>
+            </td>
+            <td class="text-center">
+              <a href="Admin_librarian_info.html" class="btn btn-primary"
+                >View</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="student-search">Bautista, Kayson A.</td>
+            <td class="student-search text-center m-hide">
+              bautistak@librarian.students.nu-laguna.edu.ph
+            </td>
+            <td class="text-center m-hide">Student</td>
+            <td class="text-center">
+              <button class="btn btn-outline-danger">REMOVE</button>
+            </td>
+            <td class="text-center">
+              <a href="Admin_librarian_info.html" class="btn btn-primary"
+                >View</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="student-search">Tan, Fernanda</td>
+            <td class="student-search text-center m-hide">
+              tanf@librarian.students.nu-laguna.edu.ph
+            </td>
+            <td class="text-center m-hide">Student</td>
+            <td class="text-center">
+              <button class="btn btn-outline-danger">REMOVE</button>
+            </td>
+            <td class="text-center">
+              <a href="Admin_librarian_info.html" class="btn btn-primary"
+                >View</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="student-search">Santos, Alex D.</td>
+            <td class="student-search text-center m-hide">
+              santosa@librarian.students.nu-laguna.edu.ph
+            </td>
+            <td class="text-center m-hide">Student</td>
+            <td class="text-center">
+              <button class="btn btn-outline-danger">REMOVE</button>
+            </td>
+            <td class="text-center">
+              <a href="Admin_librarian_info.html" class="btn btn-primary"
+                >View</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="student-search">Perry, Tate Kate C.</td>
+            <td class="student-search text-center m-hide">
+              perryt@librarian.students.nu-laguna.edu.ph
+            </td>
+            <td class="text-center m-hide">Student</td>
+            <td class="text-center">
+              <button class="btn btn-outline-danger">REMOVE</button>
+            </td>
+            <td class="text-center">
+              <a href="Admin_librarian_info.html" class="btn btn-primary"
+                >View</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="student-search">Congzon, Ajello C.</td>
+            <td class="student-search text-center m-hide">
+              congzona@librarian.students.nu-laguna.edu.ph
+            </td>
+            <td class="text-center m-hide">Student</td>
+            <td class="text-center">
+              <button class="btn btn-outline-danger">REMOVE</button>
+            </td>
+            <td class="text-center">
+              <a href="Admin_librarian_info.html" class="btn btn-primary"
+                >View</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="student-search">Burgos, Jemuel T.</td>
+            <td class="student-search text-center m-hide">
+              burgosj@librarian.students.nu-laguna.edu.ph
+            </td>
+            <td class="text-center m-hide">Student</td>
+            <td class="text-center">
+              <button class="btn btn-outline-danger">REMOVE</button>
+            </td>
+            <td class="text-center">
+              <a href="Admin_librarian_info.html" class="btn btn-primary"
+                >View</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="student-search">Delos Reyes, Ace A.</td>
+            <td class="student-search text-center m-hide">
+              delosreyesa@librarian.students.nu-laguna.edu.ph
+            </td>
+            <td class="text-center m-hide">Student</td>
+            <td class="text-center">
+              <button class="btn btn-outline-danger">REMOVE</button>
+            </td>
+            <td class="text-center">
+              <a href="Admin_librarian_info.html" class="btn btn-primary"
+                >View</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="student-search">Revilleza, Carl Jerald B.</td>
+            <td class="student-search text-center m-hide">
+              revillezac@librarian.students.nu-laguna.edu.ph
+            </td>
+            <td class="text-center m-hide">Student</td>
+            <td class="text-center">
+              <button class="btn btn-outline-danger">REMOVE</button>
+            </td>
+            <td class="text-center">
+              <a href="Admin_librarian_info.html" class="btn btn-primary"
+                >View</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="student-search">Corona, John John A.</td>
+            <td class="student-search text-center m-hide">
+              coronaj@librarian.students.nu-laguna.edu.ph
+            </td>
+            <td class="text-center m-hide">Student</td>
+            <td class="text-center">
+              <button class="btn btn-outline-danger">REMOVE</button>
+            </td>
+            <td class="text-center">
+              <a href="Admin_librarian_info.html" class="btn btn-primary"
+                >View</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="student-search">Aquino, Althea Reece</td>
+            <td class="student-search text-center m-hide">
+              aquinoa@librarian.students.nu-laguna.edu.ph
+            </td>
+            <td class="text-center m-hide">Student</td>
+            <td class="text-center">
+              <button class="btn btn-outline-danger">REMOVE</button>
+            </td>
+            <td class="text-center">
+              <a href="Admin_librarian_info.html" class="btn btn-primary"
+                >View</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="student-search">Reyes, Trevor A.</td>
+            <td class="student-search text-center m-hide">
+              reyest@librarian.students.nu-laguna.edu.ph
+            </td>
+            <td class="text-center m-hide">Student</td>
+            <td class="text-center">
+              <button class="btn btn-outline-danger">REMOVE</button>
+            </td>
+            <td class="text-center">
+              <a href="Admin_librarian_info.html" class="btn btn-primary"
+                >View</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="student-search">Moreno, Clara David C.</td>
+            <td class="student-search text-center m-hide">
+              morenoc@librarian.students.nu-laguna.edu.ph
+            </td>
+            <td class="text-center m-hide">Student</td>
+            <td class="text-center">
+              <button class="btn btn-outline-danger">REMOVE</button>
+            </td>
+            <td class="text-center">
+              <a href="Admin_librarian_info.html" class="btn btn-primary"
+                >View</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="student-search">Palacol, Francine Denise N.</td>
+            <td class="student-search text-center m-hide">
+              palacolf@librarian.students.nu-laguna.edu.ph
+            </td>
+            <td class="text-center m-hide">Student</td>
+            <td class="text-center">
+              <button class="btn btn-outline-danger">REMOVE</button>
+            </td>
+            <td class="text-center">
+              <a href="Admin_librarian_info.html" class="btn btn-primary"
+                >View</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="student-search">Seron, Ashley Jasmine S.</td>
+            <td class="student-search text-center m-hide">
+              serona@librarian.students.nu-laguna.edu.ph
+            </td>
+            <td class="text-center m-hide">Student</td>
+            <td class="text-center">
+              <button class="btn btn-outline-danger">REMOVE</button>
+            </td>
+            <td class="text-center">
+              <a href="Admin_librarian_info.html" class="btn btn-primary"
+                >View</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="student-search">Tribbiani, Joey A.</td>
+            <td class="student-search text-center m-hide">
+              tribbinaij@librarian.students.nu-laguna.edu.ph
+            </td>
+            <td class="text-center m-hide">Student</td>
+            <td class="text-center">
+              <button class="btn btn-outline-danger">REMOVE</button>
+            </td>
+            <td class="text-center">
+              <a href="Admin_librarian_info.html" class="btn btn-primary"
+                >View</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="student-search">Bing, Chandler Muriel</td>
+            <td class="student-search text-center m-hide">
+              bingc@librarian.students.nu-laguna.edu.ph
+            </td>
+            <td class="text-center m-hide">Student</td>
+            <td class="text-center">
+              <button class="btn btn-outline-danger">REMOVE</button>
+            </td>
+            <td class="text-center">
+              <a href="Admin_librarian_info.html" class="btn btn-primary"
+                >View</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="student-search">Geller, Ross B.</td>
+            <td class="student-search text-center m-hide">
+              gellerr@librarian.students.nu-laguna.edu.ph
+            </td>
+            <td class="text-center m-hide">Student</td>
+            <td class="text-center">
+              <button class="btn btn-outline-danger">REMOVE</button>
+            </td>
+            <td class="text-center">
+              <a href="Admin_librarian_info.html" class="btn btn-primary"
+                >View</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="student-search">Grey, Meredith Candice B.</td>
+            <td class="student-search text-center m-hide">
+              greym@librarian.students.nu-laguna.edu.ph
+            </td>
+            <td class="text-center m-hide">Student</td>
+            <td class="text-center">
+              <button class="btn btn-outline-danger">REMOVE</button>
+            </td>
+            <td class="text-center">
+              <a href="Admin_librarian_info.html" class="btn btn-primary"
+                >View</a
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="padding: 60px"></div>
+    <footer>
+      <div class="lib-footer">
+        <h1 class="text-white text-center fs-4">LIBRARY RESERVE CENTER</h1>
+        <div class="lib-footer-div d-flex text-center">
+          <a href="" class="lib-footer-links">Home | </a>
+          <a href="" class="lib-footer-links">&nbsp; Privacy Policy |</a>
+          <a href="" class="lib-footer-links">&nbsp; Terms </a>
+        </div>
+        <div class="lib-footer-btm">
+          <p class="lib-footer-txt text-center">
+            Copyright ©NU-Laguna 2023. Library Reserve Center. All Rights
+            Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

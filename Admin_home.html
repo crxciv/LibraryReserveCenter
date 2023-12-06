@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="Resources/Wicon.png" type="image/x-icon" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>LRC | Admin</title>
+  </head>
+  <body class="admin-body">
+    <div id="nav-on-top" class=" ">
+      <div>
+        <nav class="admin-nav navbar">
+          <div class="container-fluid">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+              id="button"
+              style="border: 0"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div
+              class="sidebar admin-sidebar offcanvas offcanvas-start"
+              tabindex="-1"
+              id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel"
+            >
+              <div class="offcanvas-header">
+                <h3>Admin</h3>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body">
+                <div class="text-center d-flex flex-column"></div>
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="Admin_home.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Admin_upload.html"
+                      >Upload Books</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Admin_managebooks.html"
+                      >Manage Book</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Admin_missing.html"
+                      >Missing Book</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Admin_student.html"
+                      >Students Info</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Admin_librarian.html"
+                      >Librarian Info</a
+                    >
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="Admin_transactions.html"
+                      >Transactions</a
+                    >
+                  </li>
+                </ul>
+                <a
+                  href="login.html"
+                  class="admin-nav-lgout btn btn-outline-danger"
+                  >Log Out</a
+                >
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="r-line"></div>
+      </div>
+    </div>
+    <br /><br /><br />
+    <div class="admin-hme-tile-div container shadow-lg">
+      <h1 class="admin-home-txt">ADMIN PANEL</h1>
+    </div>
+    <br /><br /><br />
+    <div class="container admin-div-dark shadow-lg">
+      <div class="admin-home-wrap-div">
+        <div class="admin-box">
+          <a href="Admin_managebooks.html">
+            <div class="admin-inner-box">
+              <h1>24</h1>
+              <h5>BOOKS</h5>
+            </div>
+          </a>
+        </div>
+        <div class="admin-box">
+          <a href="Admin_transactions.html">
+            <div class="admin-inner-box">
+              <h1>7</h1>
+              <h5>RESERVATION</h5>
+            </div>
+          </a>
+        </div>
+        <div class="admin-box">
+          <a href="Admin_transactions.html">
+            <div class="admin-inner-box">
+              <h1>5</h1>
+              <h5>BORROWED</h5>
+            </div>
+          </a>
+        </div>
+
+        <div class="admin-box">
+          <a href="Admin_missing.html">
+            <div class="admin-inner-box">
+              <h1>5</h1>
+              <h5>MISSING</h5>
+            </div>
+          </a>
+        </div>
+        <div class="admin-box">
+          <a href="Admin_transactions.html">
+            <div class="admin-inner-box">
+              <h1>3</h1>
+              <h5>TO PICK UP</h5>
+            </div>
+          </a>
+        </div>
+        <div class="admin-box">
+          <a href="Admin_transactions.html">
+            <div class="admin-inner-box">
+              <h1>4</h1>
+              <h5>TO RETURN</h5>
+            </div>
+          </a>
+        </div>
+        <div class="admin-box">
+          <a href="Admin_student.html">
+            <div class="admin-inner-box">
+              <h1>90</h1>
+              <h5>STUDENTS</h5>
+            </div>
+          </a>
+        </div>
+        <div class="admin-box">
+          <a href="Admin_librarian.html">
+            <div class="admin-inner-box">
+              <h1>35</h1>
+              <h5>LIBRARIAN</h5>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div style="padding: 150px"></div>
+    <footer>
+      <div class="lib-footer">
+        <h1 class="text-white text-center fs-4">LIBRARY RESERVE CENTER</h1>
+        <div class="lib-footer-div d-flex text-center">
+          <a href="" class="lib-footer-links">Home | </a>
+          <a href="" class="lib-footer-links">&nbsp; Privacy Policy |</a>
+          <a href="" class="lib-footer-links">&nbsp; Terms </a>
+        </div>
+        <div class="lib-footer-btm">
+          <p class="lib-footer-txt text-center">
+            Copyright ©NU-Laguna 2023. Library Reserve Center. All Rights
+            Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="Resources/Wicon.png" type="image/x-icon" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/8a364c3095.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>LRC | Admin</title>
+  </head>
+  <body class="admin-body">
+    <div id="nav-on-top" class=" ">
+      <div>
+        <nav class="admin-nav navbar">
+          <div class="container-fluid">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+              id="button"
+              style="border: 0"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div
+              class="sidebar admin-sidebar offcanvas offcanvas-start"
+              tabindex="-1"
+              id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel"
+            >
+              <div class="offcanvas-header">
+                <h3>Admin</h3>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body">
+                <div class="text-center d-flex flex-column"></div>
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class="nav-link" href="Admin_home.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Admin_upload.html"
+                      >Upload Books</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="Admin_managebooks.html"
+                      >Manage Book</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="Admin_missing.html"
+                      >Missing Book</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Admin_student.html"
+                      >Students Info</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Admin_librarian.html"
+                      >Librarian Info</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Admin_transactions.html"
+                      >Transactions</a
+                    >
+                  </li>
+                </ul>
+                <a
+                  href="login.html"
+                  class="admin-nav-lgout btn btn-outline-danger"
+                  >Log Out</a
+                >
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="r-line"></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="search-container mx-auto">
+        <form on>
+          <input
+            type="text"
+            id="search-item"
+            class="search-input admin-search"
+            placeholder="Search..."
+            onkeyup="search()"
+          />
+          <i class="fa fa-search search-icon"></i>
+        </form>
+      </div>
+    </div>
+    <div class="books-nav-div">
+      <div class="d-flex justify-content-between container">
+        <button class="btn" onclick="history.back()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            fill="currentColor"
+            class="bi bi-arrow-left-short"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"
+            />
+          </svg>
+        </button>
+
+        <select
+          name="sort"
+          id="sort"
+          class="sort admin-sort form-control"
+          onchange="sortBooks()"
+        >
+          <option value="" selected disabled>Sort By:</option>
+          <option value="all">All Cateogry</option>
+          <option value="SEA">SEA</option>
+          <option value="SCS">SCS</option>
+          <option value="SABM">SABM</option>
+          <option value="SAS">SAS</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="admin-books-list">
+      <div class="book-list container" id="book-list">
+        <div class="book" data-category="SEA">
+          <img src="Books/1.png" width="200px" />
+          <div class="b-details">
+            <h3>Metric Handbook Planning and Design Data (6th Edition)</h3>
+            <h6 class="b-category"><i>SEA</i></h6>
+          </div>
+          <div class="status">
+            <div class="book-status d-flex">
+              <div class="avail"></div>
+              <h6>Available</h6>
+            </div>
+            <a
+              href="Admin_edit.html"
+              class="btn form-control btn-outline-success"
+              >Edit
+            </a>
+          </div>
+        </div>
+        <div class="book" data-category="SCS">
+          <img src="Books/6.png" width="200px" />
+          <div class="b-details">
+            <h3>Java Programming (8th Edition)</h3>
+            <h6 class="b-category"><i>SCS</i></h6>
+          </div>
+          <div class="status">
+            <div class="book-status d-flex">
+              <div class="avail"></div>
+              <h6>Available</h6>
+            </div>
+            <a
+              href="Admin_edit.html"
+              class="btn form-control btn-outline-success"
+              >Edit
+            </a>
+          </div>
+        </div>
+        <div class="book" data-category="SAS">
+          <img src="Books/14.png" width="200px" />
+          <div class="b-details">
+            <h3>Graphic Design x100</h3>
+            <h6 class="b-category"><i>SAS</i></h6>
+          </div>
+          <div class="status">
+            <div class="book-status d-flex">
+              <div class="avail"></div>
+              <h6>Available</h6>
+            </div>
+            <a
+              href="Admin_edit.html"
+              class="btn form-control btn-outline-success"
+              >Edit
+            </a>
+          </div>
+        </div>
+        <div class="book" data-category="SABM">
+          <img src="Books/17.png" width="200px" />
+          <div class="b-details">
+            <h3>Managerial Accounting (Global Edition)</h3>
+            <h6 class="b-category"><i>SABM</i></h6>
+          </div>
+          <div class="status">
+            <div class="book-status d-flex">
+              <div class="avail"></div>
+              <h6>Available</h6>
+            </div>
+
+            <a
+              href="Admin_edit.html"
+              class="btn form-control btn-outline-success"
+              >Edit
+            </a>
+          </div>
+        </div>
+        <div class="book" data-category="SCS">
+          <img src="Books/9.png" width="200px" />
+          <div class="b-details">
+            <h3>iCloud (2nd Edition)</h3>
+            <h6 class="b-category"><i>SCS</i></h6>
+          </div>
+          <div class="status">
+            <div class="book-status d-flex">
+              <div class="avail"></div>
+              <h6>Available</h6>
+            </div>
+
+            <a
+              href="Admin_edit.html"
+              class="btn form-control btn-outline-success"
+              >Edit
+            </a>
+          </div>
+        </div>
+        <div class="book" data-category="SABM">
+          <img src="Books/12.png" width="200px" />
+          <div class="b-details">
+            <h3>Principle of Marketing (1st Edition)</h3>
+            <h6 class="b-category"><i>SABM</i></h6>
+          </div>
+          <div class="status">
+            <div class="book-status d-flex">
+              <div class="avail"></div>
+              <h6>Available</h6>
+            </div>
+
+            <a
+              href="Admin_edit.html"
+              class="btn form-control btn-outline-success"
+              >Edit
+            </a>
+          </div>
+        </div>
+        <div class="book" data-category="SAS">
+          <img src="Books/19.png" width="200px" />
+          <div class="b-details">
+            <h3>The Games</h3>
+            <h6 class="b-category"><i>SAS</i></h6>
+          </div>
+          <div class="status">
+            <div class="book-status d-flex">
+              <div class="avail"></div>
+              <h6>Available</h6>
+            </div>
+
+            <a
+              href="Admin_edit.html"
+              class="btn form-control btn-outline-success"
+              >Edit
+            </a>
+          </div>
+        </div>
+        <div class="book" data-category="SEA">
+          <img src="Books/5.png" width="200px" />
+          <div class="b-details">
+            <h3>Interior Design Illustrated (4th Edition)</h3>
+            <h6 class="b-category"><i>SEA</i></h6>
+          </div>
+          <div class="status">
+            <div class="book-status d-flex">
+              <div class="avail"></div>
+              <h6>Available</h6>
+            </div>
+
+            <a
+              href="Admin_edit.html"
+              class="btn form-control btn-outline-success"
+              >Edit
+            </a>
+          </div>
+        </div>
+        <div class="book" data-category="SCS">
+          <img src="Books/7.png" width="200px" />
+          <div class="b-details">
+            <h3>Web Development and Design Foundations</h3>
+            <h6 class="b-category"><i>SCS</i></h6>
+          </div>
+          <div class="status">
+            <div class="book-status d-flex">
+              <div class="avail"></div>
+              <h6>Available</h6>
+            </div>
+
+            <a
+              href="Admin_edit.html"
+              class="btn form-control btn-outline-success"
+              >Edit
+            </a>
+          </div>
+        </div>
+        <div class="book" data-category="SAS">
+          <img src="Books/16.png" width="200px" />
+          <div class="b-details">
+            <h3>NeuroLogic</h3>
+            <h6 class="b-category"><i>SAS</i></h6>
+          </div>
+          <div class="status">
+            <div class="book-status d-flex">
+              <div class="avail"></div>
+              <h6>Available</h6>
+            </div>
+
+            <a
+              href="Admin_edit.html"
+              class="btn form-control btn-outline-success"
+              >Edit
+            </a>
+          </div>
+        </div>
+        <div class="book" data-category="SAS">
+          <img src="Books/20.png" width="200px" />
+          <div class="b-details">
+            <h3>The Economic of Sports (6th Edition)</h3>
+            <h6 class="b-category"><i>SAS</i></h6>
+          </div>
+          <div class="status">
+            <div class="book-status d-flex">
+              <div class="avail"></div>
+              <h6>Available</h6>
+            </div>
+
+            <a
+              href="Admin_edit.html"
+              class="btn form-control btn-outline-success"
+              >Edit
+            </a>
+          </div>
+        </div>
+        <div class="book" data-category="SEA">
+          <img src="Books/3.png" width="200px" />
+          <div class="b-details">
+            <h3>Computer Networking (6th Edition)</h3>
+            <h6 class="b-category"><i>SEA</i></h6>
+          </div>
+          <div class="status">
+            <div class="book-status d-flex">
+              <div class="avail"></div>
+              <h6>Available</h6>
+            </div>
+
+            <a
+              href="Admin_edit.html"
+              class="btn form-control btn-outline-success"
+              >Edit
+            </a>
+          </div>
+        </div>
+        <div class="book" data-category="SABM">
+          <img src="Books/24.png" width="200px" />
+          <div class="b-details">
+            <h3>The New Rules of Marketing & PR</h3>
+            <h6 class="b-category"><i>SABM</i></h6>
+          </div>
+          <div class="status">
+            <div class="book-status d-flex">
+              <div class="avail"></div>
+              <h6>Available</h6>
+            </div>
+
+            <a
+              href="Admin_edit.html"
+              class="btn form-control btn-outline-success"
+              >Edit
+            </a>
+          </div>
+        </div>
+
+        <div class="book" data-category="SEA">
+          <img src="Books/4.png" width="200px" />
+          <div class="b-details">
+            <h3>Analog Integrated Circuit Design (2nd Edition)</h3>
+            <h6 class="b-category"><i>SEA</i></h6>
+          </div>
+          <div class="status">
+            <div class="book-status d-flex">
+              <div class="avail"></div>
+              <h6>Available</h6>
+            </div>
+            <a
+              href="Admin_edit.html"
+              class="btn form-control btn-outline-success"
+              >Edit
+            </a>
+          </div>
+        </div>
+        <div class="book" data-category="SABM">
+          <img src="Books/18.png" width="200px" />
+          <div class="b-details">
+            <h3>Auditing Theory (2018 Edition)</h3>
+            <h6 class="b-category"><i>SABM</i></h6>
+          </div>
+          <div class="status">
+            <div class="book-status d-flex">
+              <div class="avail"></div>
+              <h6>Available</h6>
+            </div>
+
+            <a
+              href="Admin_edit.html"
+              class="btn form-control btn-outline-success"
+              >Edit
+            </a>
+          </div>
+        </div>
+        <div class="book" data-category="SCS">
+          <img src="Books/10.png" width="200px" />
+          <div class="b-details">
+            <h3>Beyond Cybersecurity</h3>
+            <h6 class="b-category"><i>SCS</i></h6>
+          </div>
+          <div class="status">
+            <div class="book-status d-flex">
+              <div class="avail"></div>
+              <h6>Available</h6>
+            </div>
+
+            <a
+              href="Admin_edit.html"
+              class="btn form-control btn-outline-success"
+              >Edit
+            </a>
+          </div>
+        </div>
+        <div class="book" data-category="SAS">
+          <img src="Books/15.png" width="200px" />
+          <div class="b-details">
+            <h3>Criminology: A Complete Introduction</h3>
+            <h6 class="b-category"><i>SAS</i></h6>
+          </div>
+          <div class="status">
+            <div class="book-status d-flex">
+              <div class="avail"></div>
+              <h6>Available</h6>
+            </div>
+
+            <a
+              href="Admin_edit.html"
+              class="btn form-control btn-outline-success"
+              >Edit
+            </a>
+          </div>
+        </div>
+        <div class="book" data-category="SABM">
+          <img src="Books/11.png" width="200px" />
+          <div class="b-details">
+            <h3>Intermediate Accounting 2 (2021 Edition)</h3>
+            <h6 class="b-category"><i>SABM</i></h6>
+          </div>
+          <div class="status">
+            <div class="book-status d-flex">
+              <div class="avail"></div>
+              <h6>Available</h6>
+            </div>
+
+            <a
+              href="Admin_edit.html"
+              class="btn form-control btn-outline-success"
+              >Edit
+            </a>
+          </div>
+        </div>
+        <div class="book" data-category="SCS">
+          <img src="Books/22.png" width="200px" />
+          <div class="b-details">
+            <h3>Improving Software Development Productivity</h3>
+            <h6 class="b-category"><i>SCS</i></h6>
+          </div>
+          <div class="status">
+            <div class="book-status d-flex">
+              <div class="avail"></div>
+              <h6>Available</h6>
+            </div>
+            <a
+              href="Admin_edit.html"
+              class="btn form-control btn-outline-success"
+              >Edit
+            </a>
+          </div>
+        </div>
+        <div class="book" data-category="SABM">
+          <img src="Books/25.png" width="200px" />
+          <div class="b-details">
+            <h3>The Real Madrid Way</h3>
+            <h6 class="b-category"><i>SABM</i></h6>
+          </div>
+          <div class="status">
+            <div class="book-status d-flex">
+              <div class="avail"></div>
+              <h6>Available</h6>
+            </div>
+
+            <a
+              href="Admin_edit.html"
+              class="btn form-control btn-outline-success"
+              >Edit
+            </a>
+          </div>
+        </div>
+
+        <div class="book" data-category="SCS">
+          <img class="u-avail" src="Books/8.png" />
+          <div class="b-details">
+            <h3>PHP Programming with MySQL</h3>
+            <h6 class="b-category"><i>SCS</i></h6>
+          </div>
+          <div class="status">
+            <div class="book-status d-flex">
+              <div class="unavail"></div>
+              <h6>Borrowed</h6>
+            </div>
+
+            <a
+              href="Admin_edit.html"
+              class="btn form-control btn-outline-success"
+              >Edit
+            </a>
+          </div>
+        </div>
+        <div class="book" data-category="SEA">
+          <img class="u-avail" src="Books/2.png" />
+          <div class="b-details">
+            <h3>Engineering Fundamentals An Intro to Engineering</h3>
+            <h6 class="b-category"><i>SEA</i></h6>
+          </div>
+          <div class="status">
+            <div class="book-status d-flex">
+              <div class="unavail"></div>
+              <h6>Borrowed</h6>
+            </div>
+
+            <a
+              href="Admin_edit.html"
+              class="btn form-control btn-outline-success"
+              >Edit
+            </a>
+          </div>
+        </div>
+
+        <div class="book" data-category="SAS">
+          <img class="u-avail" src="Books/21.png" />
+          <div class="b-details">
+            <h3>Every Town is a Sports Town</h3>
+            <h6 class="b-category"><i>SAS</i></h6>
+          </div>
+          <div class="status">
+            <div class="book-status d-flex">
+              <div class="unavail"></div>
+              <h6>Borrowed</h6>
+            </div>
+
+            <a
+              href="Admin_edit.html"
+              class="btn form-control btn-outline-success"
+              >Edit
+            </a>
+          </div>
+        </div>
+        <div class="book" data-category="SABM">
+          <img class="u-avail" src="Books/13.png" width="200px" />
+          <div class="b-details">
+            <h3>Tourism (11th Edition)</h3>
+            <h6 class="b-category"><i>SABM</i></h6>
+          </div>
+          <div class="status">
+            <div class="book-status d-flex">
+              <div class="unavail"></div>
+              <h6>Borrowed</h6>
+            </div>
+
+            <a
+              href="Admin_edit.html"
+              class="btn form-control btn-outline-success"
+              >Edit
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="padding: 50px"></div>
+    <footer>
+      <div class="lib-footer">
+        <h1 class="text-white text-center fs-4">LIBRARY RESERVE CENTER</h1>
+        <div class="lib-footer-div d-flex text-center">
+          <a href="" class="lib-footer-links">Home | </a>
+          <a href="" class="lib-footer-links">&nbsp; Privacy Policy |</a>
+          <a href="" class="lib-footer-links">&nbsp; Terms </a>
+        </div>
+        <div class="lib-footer-btm">
+          <p class="lib-footer-txt text-center">
+            Copyright ©NU-Laguna 2023. Library Reserve Center. All Rights
+            Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="html" lang="en">
+  <head>
+    <link rel="icon" href="Resources/NULOGO.webp" type="image/x-icon" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <title>LRC | Login</title>
+  </head>
+  <body class="login-body">
+    <div class="wrapper">
+      <div class="login-imgdiv text-center">
+        <img class="mx-auto" src="Resources/NULOGO.webp" alt="" />
+      </div>
+      <div class="title-text">
+        <div class="title login">Login Form</div>
+        <div class="title signup">Signup Form</div>
+      </div>
+      <br />
+      <div class="form-inner">
+        <form onsubmit="return validateForm()" class="login">
+          <h4 class="login-form-label">Email:</h4>
+          <div class="field">
+            <input
+              name="email"
+              id="email"
+              type="email"
+              placeholder="Email Address"
+              required
+            />
+          </div>
+          <h4 class="login-form-label">Password:</h4>
+          <div class="field">
+            <input
+              name="password"
+              id="password"
+              type="password"
+              placeholder="Password"
+              required
+            />
+          </div>
+
+          <div class="pass-link"><a href="#">Forgot password?</a></div>
+          <div class="field btn" style="margin-top: 50px;">
+            <div class="btn-layer"></div>
+            <button type="submit">Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

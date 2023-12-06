@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="Resources/Wicon.png" type="image/x-icon" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>LRC | Admin</title>
+  </head>
+  <body class="admin-body">
+    <div id="nav-on-top" class=" ">
+      <div>
+        <nav class="admin-nav navbar">
+          <div class="container-fluid">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+              id="button"
+              style="border: 0"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div
+              class="sidebar admin-sidebar offcanvas offcanvas-start"
+              tabindex="-1"
+              id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel"
+            >
+              <div class="offcanvas-header">
+                <h3>Admin</h3>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body">
+                <div class="text-center d-flex flex-column"></div>
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class="nav-link" href="Admin_home.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Admin_upload.html"
+                      >Upload Books</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Admin_managebooks.html"
+                      >Manage Book</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Admin_missing.html"
+                      >Missing Book</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Admin_student.html"
+                      >Students Info</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Admin_librarian.html"
+                      >Librarian Info</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="Admin_transactions.html"
+                      >Transactions</a
+                    >
+                  </li>
+                </ul>
+                <a
+                  href="login.html"
+                  class="admin-nav-lgout btn btn-outline-danger"
+                  >Log Out</a
+                >
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="r-line"></div>
+      </div>
+    </div>
+    <div class="admin-hme-tile-div container shadow-lg">
+      <h1 class="admin-home-txt">BOOK REPORTS</h1>
+    </div>
+    <br /><br />
+    <div class="container admin-div-dark shadow-lg">
+      <table
+        id="data-table"
+        class="admin-student-table table table-hover table-responsive-sm"
+        style="width: 100%"
+      >
+        <thead>
+          <tr class="text-center">
+            <th>Name</th>
+            <th class="table-hide">Student No</th>
+            <th class="table-hide">Books</th>
+            <th>Pick Up</th>
+            <th>Return</th>
+          </tr>
+        </thead>
+
+        <tbody class="student-list">
+          <tr class="student">
+            <td class="student-search">De Borja, Abdul Aziz A.</td>
+            <td class="student-search text-center table-hide">2022-120709</td>
+            <td class="text-center table-hide">
+              Java Programming (8th Edition)
+            </td>
+            <td class="text-center">11/13/23</td>
+            <td class="text-center">11/20/23</td>
+          </tr>
+          <tr>
+            <td class="student-search">Celino, Andrea Charisse A.</td>
+            <td class="student-search text-center table-hide">2022-120162</td>
+            <td class="text-center table-hide">Managerial Accounting</td>
+            <td class="text-center">10/21/23</td>
+            <td class="text-center">10/27/23</td>
+          </tr>
+          <tr>
+            <td class="student-search">Rausa, Zyrha Alliah</td>
+            <td class="student-search text-center table-hide">2022-120112</td>
+            <td class="text-center table-hide">
+              Criminology: A Complete Introduction
+            </td>
+            <td class="text-center">12/17/23</td>
+            <td class="text-center">12/23/23</td>
+          </tr>
+          <tr>
+            <td class="student-search">Young, Ethan G.</td>
+            <td class="student-search text-center table-hide">2022-120113</td>
+            <td class="text-center table-hide">Beyond Cybersecurity</td>
+            <td class="text-center">05/24/23</td>
+            <td class="text-center">05/31/23</td>
+          </tr>
+          <tr>
+            <td class="student-search">Togado, Apple Jane U.</td>
+            <td class="student-search text-center table-hide">2023-120114</td>
+            <td class="text-center table-hide">iCloud</td>
+            <td class="text-center">07/08/23</td>
+            <td class="text-center">07/15/23</td>
+          </tr>
+          <tr>
+            <td class="student-search">Brofar, Euwayne Paulette B.</td>
+            <td class="student-search text-center table-hide">2022-120115</td>
+            <td class="text-center table-hide">PHP Programming with mySql</td>
+            <td class="text-center">04/20/23</td>
+            <td class="text-center">04/27/23</td>
+          </tr>
+          <tr>
+            <td class="student-search">Marce, Malcolm A.</td>
+            <td class="student-search text-center table-hide">2022-120116</td>
+            <td class="text-center table-hide">
+              Java Programming (8th Edition)
+            </td>
+            <td class="text-center">12/05/23</td>
+            <td class="text-center">12/10/23</td>
+          </tr>
+          <tr>
+            <td class="student-search">Lopez, Trisha B.</td>
+            <td class="student-search text-center table-hide">2022-120117</td>
+            <td class="text-center table-hide">Principle of Marketing</td>
+            <td class="text-center">06/19/23</td>
+            <td class="text-center">06/24/23</td>
+          </tr>
+          <tr>
+            <td class="student-search">Balidoy, Myle A.</td>
+            <td class="student-search text-center table-hide">2023-120118</td>
+            <td class="text-center table-hide">NeuroLogic</td>
+            <td class="text-center">11/03/23</td>
+            <td class="text-center">11/10/23</td>
+          </tr>
+          <tr>
+            <td class="student-search">Basbas, Dave S.</td>
+            <td class="student-search text-center table-hide">2022-120119</td>
+            <td class="text-center table-hide">The Economics of Sports</td>
+            <td class="text-center">11/07/23</td>
+            <td class="text-center">05/14/23</td>
+          </tr>
+          <tr>
+            <td class="student-search">Abonalla, Ronan T.</td>
+            <td class="student-search text-center table-hide">2022-120120</td>
+            <td class="text-center table-hide">The Games</td>
+            <td class="text-center">03/13/23</td>
+            <td class="text-center">03/20/23</td>
+          </tr>
+          <tr>
+            <td class="student-search">Sularta, Francis D.</td>
+            <td class="student-search text-center table-hide">2023-120121</td>
+            <td class="text-center table-hide">
+              Analog Integrated Circuit Design
+            </td>
+            <td class="text-center">10/20/23</td>
+            <td class="text-center">10/26/23</td>
+          </tr>
+          <tr>
+            <td class="student-search">Aquino, Farah R.</td>
+            <td class="student-search text-center table-hide">2021-120122</td>
+            <td class="text-center table-hide">
+              Engineering Fundamentals: An Introduction to Engineering SE
+            </td>
+            <td class="text-center">10/09/23</td>
+            <td class="text-center">10/15/23</td>
+          </tr>
+          <tr>
+            <td class="student-search">Dela Cruz, Juan G.</td>
+            <td class="student-search text-center table-hide">2022-120123</td>
+            <td class="text-center table-hide">Java Programming</td>
+            <td class="text-center">05/08/23</td>
+            <td class="text-center">05/13/23</td>
+          </tr>
+          <tr>
+            <td class="student-search">Conde, Lalaine C.</td>
+            <td class="student-search text-center table-hide">2023-120124</td>
+            <td class="text-center table-hide">
+              Metric Handbook Planning and Design Data
+            </td>
+            <td class="text-center">08/17/21</td>
+            <td class="text-center">08/23/21</td>
+          </tr>
+          <tr>
+            <td class="student-search">Fremista, Lara J.</td>
+            <td class="student-search text-center table-hide">2023-120125</td>
+            <td class="text-center table-hide">Computer Networking</td>
+            <td class="text-center">11/13/23</td>
+            <td class="text-center">11/20/23</td>
+          </tr>
+          <tr>
+            <td class="student-search">Garcia, Russell</td>
+            <td class="student-search text-center table-hide">2021-120126</td>
+            <td class="text-center table-hide">Beyond Cybersecurity</td>
+            <td class="text-center">11/12/23</td>
+            <td class="text-center">10/17/23</td>
+          </tr>
+          <tr>
+            <td class="student-search">Obmerga, Yasmin G.</td>
+            <td class="student-search text-center table-hide">2022-120127</td>
+            <td class="text-center table-hide">Intermediate Accounting 2</td>
+            <td class="text-center">08/18/23</td>
+            <td class="text-center">08/21/23</td>
+          </tr>
+          <tr>
+            <td class="student-search">Landicho, Eric Joshua</td>
+            <td class="student-search text-center table-hide">2022-120128</td>
+            <td class="text-center table-hide">
+              Web Development and Design Foundations with HTML5
+            </td>
+            <td class="text-center">01/10/23</td>
+            <td class="text-center">01/17/23</td>
+          </tr>
+          <tr>
+            <td class="student-search">Bautista, Kayson A.</td>
+            <td class="student-search text-center table-hide">2023-120129</td>
+            <td class="text-center table-hide">Interior Design Illustrated</td>
+            <td class="text-center">11/03/23</td>
+            <td class="text-center">11/09/23</td>
+          </tr>
+          <tr>
+            <td class="student-search">Tan, Fernanda</td>
+            <td class="student-search text-center table-hide">2021-120130</td>
+            <td class="text-center table-hide">
+              Analog Integrated Circuit Design
+            </td>
+            <td class="text-center">12/01/18</td>
+            <td class="text-center">12/06/18</td>
+          </tr>
+          <tr>
+            <td class="student-search">Santos, Alex D.</td>
+            <td class="student-search text-center table-hide">2023-120131</td>
+            <td class="text-center table-hide">
+              Criminology: A Complete Introduction
+            </td>
+            <td class="text-center">12/17/23</td>
+            <td class="text-center">12/22/23</td>
+          </tr>
+          <tr>
+            <td class="student-search">Perry, Tate Kate C.</td>
+            <td class="student-search text-center table-hide">2022-120132</td>
+            <td class="text-center table-hide">Auditing Theory</td>
+            <td class="text-center">08/09/21</td>
+            <td class="text-center">08/15/21</td>
+          </tr>
+          <tr>
+            <td class="student-search">Congzon, Ajello C.</td>
+            <td class="student-search text-center table-hide">2023-120133</td>
+            <td class="text-center table-hide">Computer Networking</td>
+            <td class="text-center">04/08/20</td>
+            <td class="text-center">04/15/20</td>
+          </tr>
+          <tr>
+            <td class="student-search">Burgos, Jemuel T.</td>
+            <td class="student-search text-center table-hide">2022-120134</td>
+            <td class="text-center table-hide">Tourism</td>
+            <td class="text-center">11/15/23</td>
+            <td class="text-center">11/21/23</td>
+          </tr>
+          <tr>
+            <td class="student-search">Delos Reyes, Ace A.</td>
+            <td class="student-search text-center table-hide">2022-120135</td>
+            <td class="text-center table-hide">Graphic Design x100</td>
+            <td class="text-center">12/25/23</td>
+            <td class="text-center">12/30/23</td>
+          </tr>
+          <tr>
+            <td class="student-search">Revilleza, Carl Jerald B.</td>
+            <td class="student-search text-center table-hide">2021-120136</td>
+            <td class="text-center table-hide">Java Programming</td>
+            <td class="text-center">09/13/22</td>
+            <td class="text-center">09/27/22</td>
+          </tr>
+          <tr>
+            <td class="student-search">Corona, John John A.</td>
+            <td class="student-search text-center table-hide">2022-120137</td>
+            <td class="text-center table-hide">
+              Java Programming (8th Edition)
+            </td>
+            <td class="text-center">07/17/23</td>
+            <td class="text-center">07/23/23</td>
+          </tr>
+          <tr>
+            <td class="student-search">Aquino, Althea Reece</td>
+            <td class="student-search text-center table-hide">2023-120138</td>
+            <td class="text-center table-hide">Java Programming</td>
+            <td class="text-center">12/03/22</td>
+            <td class="text-center">12/09/22</td>
+          </tr>
+          <tr>
+            <td class="student-search">Reyes, Trevor A.</td>
+            <td class="student-search text-center table-hide">2020-120139</td>
+            <td class="text-center table-hide">Computer Networking</td>
+            <td class="text-center">06/05/20</td>
+            <td class="text-center">06/12/20</td>
+          </tr>
+          <tr>
+            <td class="student-search">Moreno, Clara David C.</td>
+            <td class="student-search text-center table-hide">2022-120140</td>
+            <td class="text-center table-hide">
+              Metric Handbook Planning and Design Data
+            </td>
+            <td class="text-center">08/15/18</td>
+            <td class="text-center">08/22/18</td>
+          </tr>
+          <tr>
+            <td class="student-search">Palacol, Francine Denise N.</td>
+            <td class="student-search text-center table-hide">2022-120141</td>
+            <td class="text-center table-hide">Intermediate Accounting 2</td>
+            <td class="text-center">03/02/22</td>
+            <td class="text-center">03/07/22</td>
+          </tr>
+          <tr>
+            <td class="student-search">Seron, Ashley Jasmine S.</td>
+            <td class="student-search text-center table-hide">2022-120142</td>
+            <td class="text-center table-hide">
+              Engineering Fundamentals: An Introduction to Engineering SE
+            </td>
+            <td class="text-center">10/19/19</td>
+            <td class="text-center">10/23/19</td>
+          </tr>
+          <tr>
+            <td class="student-search">Tribbiani, Joey A.</td>
+            <td class="student-search text-center table-hide">2022-120143</td>
+            <td class="text-center table-hide">
+              Java Programming (8th Edition)
+            </td>
+            <td class="text-center">12/03/22</td>
+            <td class="text-center">12/08/22</td>
+          </tr>
+          <tr>
+            <td class="student-search">Bing, Chandler Muriel</td>
+            <td class="student-search text-center table-hide">2022-120144</td>
+            <td class="text-center table-hide">
+              Java Programming (8th Edition)
+            </td>
+            <td class="text-center">02/13/23</td>
+            <td class="text-center">02/17/23</td>
+          </tr>
+          <tr>
+            <td class="student-search">Geller, Ross B.</td>
+            <td class="student-search text-center table-hide">2022-120145</td>
+            <td class="text-center table-hide">The Real Madrid Way</td>
+            <td class="text-center">10/11/22</td>
+            <td class="text-center">10/15/22</td>
+          </tr>
+          <tr>
+            <td class="student-search">Grey, Meredith Candice B.</td>
+            <td class="student-search text-center table-hide">2023-120146</td>
+            <td class="text-center table-hide">
+              An Insight to Matlab & Simulink
+            </td>
+            <td class="text-center">05/02/19</td>
+            <td class="text-center">05/07/19</td>
+          </tr>
+          <tr>
+            <td class="student-search">Cruz, Ferb Andrei C.</td>
+            <td class="student-search text-center table-hide">2021-120147</td>
+            <td class="text-center table-hide">Every Town is a Sports Town</td>
+            <td class="text-center">12/10/18</td>
+            <td class="text-center">12/17/18</td>
+          </tr>
+          <tr>
+            <td class="student-search">Cruz, Phineas Andrew A.</td>
+            <td class="student-search text-center table-hide">2021-120148</td>
+            <td class="text-center table-hide">
+              Java Programming (8th Edition)
+            </td>
+            <td class="text-center">10/25/22</td>
+            <td class="text-center">10/30/22</td>
+          </tr>
+          <tr>
+            <td class="student-search">Rodrigo, Olivia O.</td>
+            <td class="student-search text-center table-hide">2022-120149</td>
+            <td class="text-center table-hide">
+              The New Rules of Marketing & PR
+            </td>
+            <td class="text-center">11/03/21</td>
+            <td class="text-center">11/10/21</td>
+          </tr>
+          <tr>
+            <td class="student-search">Swift, Taylor B.</td>
+            <td class="student-search text-center table-hide">2020-120150</td>
+            <td class="text-center table-hide">
+              Improving Software Development
+            </td>
+            <td class="text-center">04/07/23</td>
+            <td class="text-center">04/14/23</td>
+          </tr>
+          <tr>
+            <td class="student-search">Sheeran, Eduardo McKinley</td>
+            <td class="student-search text-center table-hide">2022-120151</td>
+            <td class="text-center table-hide">
+              Java Programming (8th Edition)
+            </td>
+            <td class="text-center">06/01/22</td>
+            <td class="text-center">06/06/22</td>
+          </tr>
+          <tr>
+            <td class="student-search">Dela Cruz, Juan A.</td>
+            <td class="student-search text-center table-hide">2022-120152</td>
+            <td class="text-center table-hide">The Real Madrid Way</td>
+            <td class="text-center">03/20/23</td>
+            <td class="text-center">03/27/23</td>
+          </tr>
+          <tr>
+            <td class="student-search">Flores, Myrna L.</td>
+            <td class="student-search text-center table-hide">2021-120153</td>
+            <td class="text-center table-hide">Computer Networking</td>
+            <td class="text-center">08/30/20</td>
+            <td class="text-center">09/03/20</td>
+          </tr>
+          <tr>
+            <td class="student-search">Artoz, Angel Cassidy F.</td>
+            <td class="student-search text-center table-hide">2023-120154</td>
+            <td class="text-center table-hide">
+              Java Programming (8th Edition)
+            </td>
+            <td class="text-center">01/20/19</td>
+            <td class="text-center">01/25/19</td>
+          </tr>
+          <tr>
+            <td class="student-search">Flores, Haidee Joy T.</td>
+            <td class="student-search text-center table-hide">2020-120155</td>
+            <td class="text-center table-hide">Managerial Accounting</td>
+            <td class="text-center">12/02/22</td>
+            <td class="text-center">12/07/22</td>
+          </tr>
+          <tr>
+            <td class="student-search">Flores, Dominic Loyd T.</td>
+            <td class="student-search text-center table-hide">2021-120156</td>
+            <td class="text-center table-hide">iCloud</td>
+            <td class="text-center">10/27/18</td>
+            <td class="text-center">10/31/18</td>
+          </tr>
+          <tr>
+            <td class="student-search">Calaoagan, Fritzi Marie Jane F.</td>
+            <td class="student-search text-center table-hide">2021-120157</td>
+            <td class="text-center table-hide">Principle of Marketing</td>
+            <td class="text-center">07/20/23</td>
+            <td class="text-center">07/23/23</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="padding: 60px"></div>
+    <footer>
+      <div class="lib-footer">
+        <h1 class="text-white text-center fs-4">LIBRARY RESERVE CENTER</h1>
+        <div class="lib-footer-div d-flex text-center">
+          <a href="" class="lib-footer-links">Home | </a>
+          <a href="" class="lib-footer-links">&nbsp; Privacy Policy |</a>
+          <a href="" class="lib-footer-links">&nbsp; Terms </a>
+        </div>
+        <div class="lib-footer-btm">
+          <p class="lib-footer-txt text-center">
+            Copyright ©NU-Laguna 2023. Library Reserve Center. All Rights
+            Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
